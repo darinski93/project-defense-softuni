@@ -1,38 +1,429 @@
-.App {
-  text-align: center;
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  background-color: #000000;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.video-element {
+  width: 1200px;
+  height: 500px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+/* Navigation */
+
+/* Global Styles */
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  background-color: #000000;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Header Styles */
+
+.tm-top-header {
+  background-color: black;
+  padding: 10px 0;
+}
+
+.tm-top-header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 60px;
+  margin-right: 60px;
+
+}
+
+.tm-logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.tm-site-logo {
+  width: 50px;
+  height: auto;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.tm-site-name {
+  margin-left: 0;
+  font-size: 40px;
+  font-weight: 500px;
+  color: white;
+  font-family: 'Handwriting', sans-serif;
+  text-shadow: 2px 2px 2px #333;
+  padding: 10px;
+}
+
+.tm-site-name:hover,
+.tm-site-name:hover+.tm-site-logo {
+  color: orange;
+  cursor: auto;
+}
+
+
+
+
+/* Navigation Styles */
+.tm-nav ul {
+
+  margin: 0;
+  padding: 0;
+}
+
+.tm-nav li {
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+}
+
+.tm-nav li {
+  margin: 20px;
+}
+
+.tm-nav a {
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  padding-left: 10px;
+  font-family: 'Tangerine', cursive;
+
+}
+
+.tm-nav a:hover {
+  color: #ff8c00;
+}
+
+.tm-nav li:before {
+  content: url('../public/img/logo.png');
+  position: absolute;
+  margin-right: 10px;
+  /* reduce the margin to move the logo closer to the text */
+  top: 50%;
+  width: 16px;
+  /* set a smaller width for the logo */
+  height: auto;
+  transform: translateY(-50%) scale(0.6);
+  /* add a scale transformation to make the logo smaller */
+  opacity: 0;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.tm-nav a:before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  /* set the same width as the logo */
+  height: 2px;
+  /* set a small height to create space between the logo and the link */
+}
+
+.tm-nav li:hover:before {
+  margin-right: 70px;
+  opacity: 1;
+  transform: translateY(-50%) scale(0.5);
+  /* increase the scale on hover to make the logo slightly larger */
+}
+
+/*footer */
+footer {
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  /* Center the columns vertically */
+  margin: 0 auto;
+  /* Center the container horizontally */
+  max-width: 960px;
+  /* Set a max width for the container */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+.contact-info,
+.opening-hours {
+  flex-basis: 45%;
+  /* Set the width of each column */
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+/*menu css------------------------------------------------------*/
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: black;
+}
+
+.pizza {
+  width: calc(20% - 12px); /* calculate 20% minus the margin */
+  margin: 0 6px 12px 6px; /* add margin to create space between pizzas */
+  border: 1px solid black;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  transition: box-shadow 0.3s ease-in-out;
+  background-image: url('../public/img/plain-backdrop-decorative-gray-textured.jpg');
+  background-size: cover;
+}
+
+.pizza:hover {
+  box-shadow: 0 0 10px rgba(247, 246, 246, 0.7);
+}
+
+.pizza-img {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+}
+
+.pizza-img img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pizza-title {
+  font-family: 'Courier New', Courier, monospace;
+  margin-top: 0;
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 5px 5px 0 0;
+  text-align: center;
+  background-color: transparent;
+  border-bottom: 1px solid black;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.pizza-desc {
+  padding: 10px;
+  border-radius: 0 0 5px 5px;
+  border-top: 1px solid black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.pizza-text {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, cursive;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.details {
+  background-color: green;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.edit {
+  background-color: red;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.pizza-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pizza-card {
+  width: 250px;
+  margin: 10px;
+  margin-left: auto; /* add this line */
+}
+
+@media only screen and (max-width: 250px) {
+  .pizza-container {
+    justify-content: flex-start;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media only screen and (max-width: 150px) {
+  .pizza-container {
+    justify-content: left;
   }
+}
+
+@media only screen and (max-width: 80px) {
+  .pizza-container {
+    justify-content: flex-start;
+  }
+  .pizza-card {
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .pizza-container {
+    justify-content: center;
+  }
+}
+
+
+
+
+/* LOGIN CSSSS -----------------------------------*/
+
+
+body {
+	background-color: black;
+}
+
+.login-container {
+	background-color: #1E1E1E;
+	color: white;
+	border-radius: 10px;
+	padding: 30px;
+	margin: auto;
+	margin-top: 50px;
+	width: 400px;
+	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.login-container h1 {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+}
+
+label {
+	margin-bottom: 10px;
+}
+
+input {
+	padding: 10px;
+	margin-bottom: 20px;
+	border-radius: 5px;
+	border: none;
+}
+
+.login-button {
+	background-color: #2ECC71;
+	color: white;
+	padding: 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.login-button:hover {
+	background-color: #27AE60;
+}
+
+a {
+	color: #2ECC71;
+}
+
+
+
+/* REGUSTER FORM ----------------------------*/
+.register-container {
+  background-color: #1c1c1c;
+  color: white;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 50px auto;
+  max-width: 400px;
+}
+
+.register-container h2 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.register-button {
+  background-color: #f33f3f;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.register-button:hover {
+  background-color: #f22;
 }
