@@ -61,6 +61,7 @@ body {
   font-family: 'Handwriting', sans-serif;
   text-shadow: 2px 2px 2px #333;
   padding: 10px;
+
 }
 
 .tm-site-name:hover,
@@ -96,6 +97,7 @@ body {
   font-weight: bold;
   padding-left: 10px;
   font-family: 'Tangerine', cursive;
+
 
 }
 
@@ -191,8 +193,10 @@ h3 {
 }
 
 .pizza {
-  width: calc(20% - 12px); /* calculate 20% minus the margin */
-  margin: 0 6px 12px 6px; /* add margin to create space between pizzas */
+  width: calc(20% - 12px);
+  /* calculate 20% minus the margin */
+  margin: 0 6px 12px 6px;
+  /* add margin to create space between pizzas */
   border: 1px solid black;
   display: flex;
   flex-direction: column;
@@ -232,7 +236,9 @@ h3 {
   background-color: transparent;
   border-bottom: 1px solid black;
   color: white;
+
 }
+
 
 .pizza-desc {
   padding: 10px;
@@ -265,7 +271,10 @@ h3 {
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
+  transition: transform 0.3s ease-in-out;
+
 }
+
 
 .edit {
   background-color: red;
@@ -276,7 +285,18 @@ h3 {
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
+  transition: transform 0.3s ease-in-out;
 }
+
+.edit:hover {
+  transform: scale(1.1);
+}
+
+.details:hover {
+  transform: scale(1.1);
+}
+
+
 
 .pizza-container {
   display: flex;
@@ -287,7 +307,8 @@ h3 {
 .pizza-card {
   width: 250px;
   margin: 10px;
-  margin-left: auto; /* add this line */
+  margin-left: auto;
+  /* add this line */
 }
 
 @media only screen and (max-width: 250px) {
@@ -306,6 +327,7 @@ h3 {
   .pizza-container {
     justify-content: flex-start;
   }
+
   .pizza-card {
     margin-right: 0;
   }
@@ -317,6 +339,32 @@ h3 {
   }
 }
 
+.add-pizza-container {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.add-pizza-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 4px 2px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.add-pizza-button:hover {
+  transform: scale(1.1);
+}
+
+
 
 
 
@@ -324,57 +372,57 @@ h3 {
 
 
 body {
-	background-color: black;
+  background-color: black;
 }
 
 .login-container {
-	background-color: #1E1E1E;
-	color: white;
-	border-radius: 10px;
-	padding: 30px;
-	margin: auto;
-	margin-top: 50px;
-	width: 400px;
-	box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  background-color: #1E1E1E;
+  color: white;
+  border-radius: 10px;
+  padding: 30px;
+  margin: auto;
+  margin-top: 50px;
+  width: 400px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
 .login-container h1 {
-	text-align: center;
-	margin-bottom: 30px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 form {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 label {
-	margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 input {
-	padding: 10px;
-	margin-bottom: 20px;
-	border-radius: 5px;
-	border: none;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: none;
 }
 
 .login-button {
-	background-color: #2ECC71;
-	color: white;
-	padding: 10px;
-	border: none;
-	border-radius: 5px;
-	cursor: pointer;
-	transition: all 0.3s ease-in-out;
+  background-color: #2ECC71;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 .login-button:hover {
-	background-color: #27AE60;
+  background-color: #27AE60;
 }
 
 a {
-	color: #2ECC71;
+  color: #2ECC71;
 }
 
 
@@ -427,3 +475,307 @@ input[type="password"] {
 .register-button:hover {
   background-color: #f22;
 }
+
+
+/* CREATE ================== */
+
+/* form container */
+.form-container-create {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* form style */
+.pizza-form {
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+  color: white;
+  width: 60%;
+  max-width: 300px;
+  padding: 50px;
+  background-image: url('../public/img/plain-backdrop-decorative-gray-textured.jpg');
+}
+
+/* form heading */
+.form-heading {
+  text-align: center;
+  font-size: 22px;
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px black;
+}
+
+/* form input label */
+.form-label {
+  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px black;
+  color: white;
+}
+
+/* form input text and textarea */
+.form-text-input,
+.form-textarea {
+  padding: 10px;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  font-size: 16px;
+  color: rgb(8, 8, 8);
+}
+
+/* form input textarea */
+.form-textarea {
+  resize: none;
+}
+
+/* form input file */
+.form-file-input {
+  margin-top: 10px;
+}
+
+/* form submit button */
+.form-submit-button {
+  padding: 10px 20px;
+  border: none;
+  background-color: orange;
+  color: white;
+  border-radius: 5px;
+  font-size: 18px;
+  font-family: 'Courier New', Courier, monospace;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* form submit button hover */
+.form-submit-button:hover {
+  background-color: #ce653f;
+}
+
+/* form input container */
+.form-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.form-submit-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+/* EDIT FORM----------------------------------------- */
+
+.menu-edit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+
+.pizza-edit {
+  background-color: rgb(72, 69, 69);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  width: 80%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pizza-img-edit {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.pizza-img-edit img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.name-container-edit {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-family: 'Handwriting', sans-serif;
+  color: white;
+}
+
+input[type="text"],
+textarea {
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  font-size: 16px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+  background-color: #f5f5f5;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+
+}
+
+.button-container-edit {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.save-edit {
+  background-color: green;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.cancel-edit {
+  background-color: #E63946;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.save-edit:hover,
+.cancel-edit:hover {
+  transform: scale(1.1);
+}
+
+
+
+/* Details CSSS------------------------------ */
+
+
+.menu-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+}
+
+.pizza-details {
+  background-color: rgb(80, 78, 78);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  width: 60%;
+  max-width: 300px;
+  border-radius: 10px;
+}
+
+.details-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.pizza-img-details {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.pizza-img-details img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.name-container-details {
+  width: 100%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+}
+
+.button-container-details {
+  width: 100%;
+  display: flex;
+  margin-top: 20px;
+
+}
+
+.delete-details {
+  background-color: #E63946;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.delete-details:hover {
+  transform: scale(1.1);
+}
+
+.pizza-title-details {
+  font-family: 'Courier New', Courier, monospace;
+  margin-top: 0;
+  font-size: 18px;
+  border-radius: 3px 3px 3px 3px;
+  text-align: center;
+  background-color: transparent;
+  border-bottom: 3px solid black;
+  color: white;
+
+}
+
+
+.pizza-desc-details {
+  border-radius: 3px 3px 3px 3px;
+  border-top: 3px solid black;
+}
+
+.pizza-text-details {
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: white;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, cursive;
+}
+
