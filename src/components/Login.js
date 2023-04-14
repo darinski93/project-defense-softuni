@@ -14,7 +14,7 @@ export default function Login() {
                         <label for="password">Password</label>
                         <input type="password" id="password" name="password" required/>
 
-                            <button type="submit">Login</button>
+                            <button className="login-button" type="submit">Login</button>
                         </form>
                         <div className="register-link">
                             <p>Don't have an account yet?</p>

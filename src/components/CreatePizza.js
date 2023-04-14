@@ -16,6 +16,10 @@ export default function CreatePizza() {
                     <label for="pizza-image" className="form-label">Pizza Image</label>
                     <input type="text" id="pizza-image" name="pizza-image" className="form-text-input" placeholder="Enter image URL" required />
                 </div>
+                <div className="form-input">
+                    <label for="pizza-price" className="form-label">Price</label>
+                    <input type="number" id="pizza-price" name="pizza-price" className="form-text-input" required />
+                </div>
                 <div className="form-submit-button-container">
                     <input type="submit" value="Create Pizza" className="form-submit-button" />
                 </div>

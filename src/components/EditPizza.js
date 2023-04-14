@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom"
+
+
 export default function EditPizza() {
 
 
@@ -21,7 +24,8 @@ export default function EditPizza() {
                     </div>
                     <div className="button-container-edit">
                         <button className="save-edit">Save</button>
-                        <button className="cancel-edit">Cancel</button>
+                        <Link to='/menu' className="cancel-edit">Cancel</Link>
+
                     </div>
                 </form>
             </div>

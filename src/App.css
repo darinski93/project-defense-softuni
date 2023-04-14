@@ -3,13 +3,19 @@
   justify-content: center;
   align-items: center;
   height: auto;
-  background-color: #000000;
+  background-image: url('https://img.freepik.com/free-vector/seamless-pizza-ingredients_1176-269.jpg?w=740&t=st=1681472787~exp=1681473387~hmac=e7f9851b298f704a2a75e7fb6896d95522e85b9d3c49441b33223b92dc8637fc');
+  border-left: rgb(5, 5, 5);
+  overflow: hidden;
 }
 
 .video-element {
   width: 1200px;
-  height: 500px;
+  height: 450px;
+  filter: brightness(1.1);
 }
+
+
+
 
 
 /* Navigation */
@@ -24,6 +30,8 @@ body {
   font-size: 16px;
   background-color: #000000;
 }
+
+
 
 /* Header Styles */
 
@@ -61,13 +69,14 @@ body {
   font-family: 'Handwriting', sans-serif;
   text-shadow: 2px 2px 2px #333;
   padding: 10px;
+  cursor: pointer;
 
 }
 
 .tm-site-name:hover,
 .tm-site-name:hover+.tm-site-logo {
   color: orange;
-  cursor: auto;
+
 }
 
 
@@ -189,26 +198,29 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  background-color: black;
+  background-image: url('https://img.freepik.com/free-vector/seamless-pizza-ingredients_1176-269.jpg?w=740&t=st=1681472787~exp=1681473387~hmac=e7f9851b298f704a2a75e7fb6896d95522e85b9d3c49441b33223b92dc8637fc');
+  padding: 20px;
 }
 
 .pizza {
   width: calc(20% - 12px);
-  /* calculate 20% minus the margin */
   margin: 0 6px 12px 6px;
-  /* add margin to create space between pizzas */
   border: 1px solid black;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: box-shadow 0.3s ease-in-out;
   background-image: url('../public/img/plain-backdrop-decorative-gray-textured.jpg');
   background-size: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  float: left;
 }
 
 .pizza:hover {
-  box-shadow: 0 0 10px rgba(247, 246, 246, 0.7);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: scale(1.03);
 }
+
+
 
 .pizza-img {
   position: relative;
@@ -231,19 +243,27 @@ h3 {
   margin-top: 0;
   font-size: 18px;
   padding: 5px;
-  border-radius: 5px 5px 0 0;
   text-align: center;
   background-color: transparent;
-  border-bottom: 1px solid black;
-  color: white;
+  border-bottom: 2px solid rgb(255, 255, 255);
+
+  background: linear-gradient(to right,
+      hsl(140, 100%, 20%),
+      hsl(140, 86%, 32%) 33%,
+      hsl(0, 0%, 100%) 50%,
+      hsl(0, 72%, 52%) 66%,
+      hsl(0, 100%, 30%));
+
+
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
 }
 
 
 .pizza-desc {
   padding: 10px;
-  border-radius: 0 0 5px 5px;
-  border-top: 1px solid black;
 }
 
 .pizza-text {
@@ -251,11 +271,13 @@ h3 {
   font-size: 14px;
   color: white;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, cursive;
+  padding-bottom: 10px;
 }
 
 .button-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   padding: 5px;
   margin-left: 50px;
@@ -272,30 +294,17 @@ h3 {
   font-size: 16px;
   font-weight: bold;
   transition: transform 0.3s ease-in-out;
-
 }
 
-
-.edit {
-  background-color: red;
-  color: white;
-  padding: 10px 25px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  transition: transform 0.3s ease-in-out;
-}
-
-.edit:hover {
-  transform: scale(1.1);
-}
 
 .details:hover {
-  transform: scale(1.1);
+  background-color: #2aa32a;
 }
 
+
+.pizza:nth-child(5n+1) {
+  clear: left;
+}
 
 
 .pizza-container {
@@ -339,10 +348,28 @@ h3 {
   }
 }
 
+.price-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.pizza-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #2ECC71;
+  background-color: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
 .add-pizza-container {
   position: absolute;
-  bottom: 10px;
-  left: 10px;
+  bottom: 0;
+  left: 20px;
+  /* change left value */
 }
 
 .add-pizza-button {
@@ -358,11 +385,10 @@ h3 {
   margin: 4px 2px;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
+  border-radius: 15px;
 }
 
-.add-pizza-button:hover {
-  transform: scale(1.1);
-}
+
 
 
 
@@ -484,6 +510,8 @@ input[type="password"] {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url('https://img.freepik.com/free-vector/seamless-pizza-ingredients_1176-269.jpg?w=740&t=st=1681472787~exp=1681473387~hmac=e7f9851b298f704a2a75e7fb6896d95522e85b9d3c49441b33223b92dc8637fc');
+
 }
 
 /* form style */
@@ -492,8 +520,8 @@ input[type="password"] {
   border-radius: 10px;
   box-shadow: 0 0 10px rgb(255, 255, 255);
   color: white;
-  width: 60%;
-  max-width: 300px;
+  width: calc(20% - 7px);
+  margin: 0 6px 12px 6px;
   padding: 50px;
   background-image: url('../public/img/plain-backdrop-decorative-gray-textured.jpg');
 }
@@ -575,16 +603,19 @@ input[type="password"] {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #000;
+  background-image: url('https://img.freepik.com/free-vector/seamless-pizza-ingredients_1176-269.jpg?w=740&t=st=1681472787~exp=1681473387~hmac=e7f9851b298f704a2a75e7fb6896d95522e85b9d3c49441b33223b92dc8637fc');
+
 }
 
 .pizza-edit {
-  background-color: rgb(72, 69, 69);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  padding: 20px;
-  width: 80%;
-  max-width: 400px;
-  border-radius: 10px;
+  width: calc(22% - 4px);
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url('../public/img/plain-backdrop-decorative-gray-textured.jpg');
+  background-size: cover;
+
 }
 
 .edit-form {
@@ -592,11 +623,12 @@ input[type="password"] {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 10px;
 }
 
 .pizza-img-edit {
   width: 100%;
-  margin-bottom: 20px;
+  margin-top: -20px;
 }
 
 .pizza-img-edit img {
@@ -626,7 +658,7 @@ textarea {
   border: none;
   border-radius: 5px;
   padding: 10px;
-  width: 100%;
+  width: 93%;
   font-size: 16px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -648,9 +680,10 @@ textarea {
 }
 
 .button-container-edit {
-  width: 80%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 20px;
 }
 
@@ -664,6 +697,7 @@ textarea {
   font-size: 16px;
   font-weight: bold;
   transition: all 0.3s ease;
+  margin-left: 5px;
 }
 
 .cancel-edit {
@@ -676,7 +710,12 @@ textarea {
   font-size: 16px;
   font-weight: bold;
   transition: all 0.3s ease;
+  margin-right: 5px;
+  text-decoration: none;
+
 }
+
+
 
 .save-edit:hover,
 .cancel-edit:hover {
@@ -687,21 +726,37 @@ textarea {
 
 /* Details CSSS------------------------------ */
 
-
 .menu-details {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #000;
+  background-image: url('https://img.freepik.com/free-vector/seamless-pizza-ingredients_1176-269.jpg?w=740&t=st=1681472787~exp=1681473387~hmac=e7f9851b298f704a2a75e7fb6896d95522e85b9d3c49441b33223b92dc8637fc');
+
 }
 
+.pizza-title-details {
+  font-size: 20px;
+  border-radius: 3px 3px 3px 3px;
+  text-align: center;
+  background-color: transparent;
+  border-bottom: 2px solid rgb(255, 253, 253);
+  color: white;
+  margin: auto;
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 .pizza-details {
-  background-color: rgb(80, 78, 78);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  padding: 20px;
-  width: 60%;
-  max-width: 300px;
-  border-radius: 10px;
+  width: calc(22% - 7px);
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-image: url('../public/img/plain-backdrop-decorative-gray-textured.jpg');
+  background-size: cover;
 }
 
 .details-form {
@@ -713,8 +768,10 @@ textarea {
 
 .pizza-img-details {
   width: 100%;
-  margin-bottom: 20px;
+  margin-top: -20px;
 }
+
+
 
 .pizza-img-details img {
   width: 100%;
@@ -723,22 +780,37 @@ textarea {
 }
 
 .name-container-details {
-  width: 100%;
-  margin-bottom: 20px;
-  display: flex;
-  flex-direction: column;
   font-family: 'Courier New', Courier, monospace;
-  color: white;
+  font-size: 14px;
+  text-align: center;
+  border-bottom: 2px solid rgb(255, 255, 255);
+
 }
 
 .button-container-details {
   width: 100%;
   display: flex;
   margin-top: 20px;
+  justify-content: space-between;
+}
+
+.edit-details {
+  background-color: #0e9607;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  margin-left: 5px;
+  text-decoration: none;
 
 }
 
 .delete-details {
+  text-decoration: none;
   background-color: #E63946;
   color: white;
   padding: 10px 25px;
@@ -748,34 +820,34 @@ textarea {
   font-size: 16px;
   font-weight: bold;
   transition: all 0.3s ease;
+  margin-right: 5px;
+
+
 }
 
+.edit-details:hover,
 .delete-details:hover {
-  transform: scale(1.1);
+  transform: scale(1.1)
 }
 
-.pizza-title-details {
-  font-family: 'Courier New', Courier, monospace;
-  margin-top: 0;
-  font-size: 18px;
-  border-radius: 3px 3px 3px 3px;
+/* ALEEEEEEEEEEEEEERGENS */
+
+.allergen-h1 {
+
   text-align: center;
-  background-color: transparent;
-  border-bottom: 3px solid black;
-  color: white;
-
+  font-size: small;
+  color: rgb(255, 254, 254);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+.allergen-text {
 
-.pizza-desc-details {
-  border-radius: 3px 3px 3px 3px;
-  border-top: 3px solid black;
+  text-align: center;
+  font-size: 15px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: rgb(223, 66, 66);
 }
 
-.pizza-text-details {
-  margin-bottom: 12px;
-  font-size: 14px;
-  color: white;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, cursive;
+.section-allergen {
+  border-bottom: 2px solid rgb(252, 249, 249);
 }
-
