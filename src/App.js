@@ -1,9 +1,9 @@
-// import './App.css';
+import './App.css';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Home from './components/Home/Home';
 
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useNavigate } from 'react-router-dom'
 import CreatePizza from './components/Create/Create';
 import DetailsPizza from './components/Details/Details';
 
@@ -24,12 +24,11 @@ import { useEffect, useState } from 'react';
 
 
 
-
-
-
 function App() {
 
   const [products, setProducts] = useState([])
+
+  const navigate = useNavigate()
 
   useEffect(() => {
     productServices.getAll()
@@ -40,10 +39,19 @@ function App() {
   }, [])
 
 
+  const onCreateProductSubmit = async (data) => {
+
+
+    const newProduct = await productServices.create(data)
+    setProducts(state => [...state, newProduct])
+
+    navigate('/menu')
+
+  }
 
   return (
 
-   
+
 
     <>
 
@@ -55,10 +63,9 @@ function App() {
           <Route path='/menu' element={<Menu products={products} />} />
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
-          <Route path='/create' element={<CreatePizza />} />
           <Route path='/edit' element={<EditPizza />} />
-          <Route path='/details' element={<DetailsPizza products={products}/>} />
-          <Route path='/create' element={<CreatePizza />}></Route>
+          <Route path='/details' element={<DetailsPizza />} />
+          <Route path='/create' element={<CreatePizza onCreateProductSubmit={onCreateProductSubmit} />}></Route>
         </Routes>
 
 

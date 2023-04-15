@@ -1,46 +1,23 @@
 
-/*menu css------------------------------------------------------*/
-
-
 .menu {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background-image: url('https://img.freepik.com/free-vector/seamless-pizza-ingredients_1176-269.jpg?w=740&t=st=1681472787~exp=1681473387~hmac=e7f9851b298f704a2a75e7fb6896d95522e85b9d3c49441b33223b92dc8637fc');
-    padding: 20px;
+    background-image: url('https://png.pngtree.com/background/20220728/original/pngtree-fast-food-doodles-hand-drawn-colorful-vector-symbols-and-objects-picture-image_1846880.jpg');
   }
   
   .pizza {
     width: calc(20% - 12px);
     margin: 0 6px 12px 6px;
-    border: 1px solid black;
-    display: flex;
+    border: 2px solid black;
     flex-direction: column;
-    justify-content: flex-start; /* Change to flex-start */
-    background-image: url('../public/img/plain-backdrop-decorative-gray-textured.jpg');
+    justify-content: space-between;
+    background-image: url('../../public/img/plain-backdrop-decorative-gray-textured.jpg');
     background-size: cover;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     float: left;
-    height: 420px;
-  }
-  
-  .pizza-desc {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-grow: 1; /* Add this */
   }
-  
-  .name-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 40px; /* Set a fixed height */
-    width: 100%; /* Set a fixed width */
-    box-sizing: border-box;
-    padding: 5px; /* Add padding */
-  }
-  
   
   .pizza:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -50,7 +27,7 @@
   
   
   .pizza-img {
-    position: cover;
+    position: relative;
     height: 180px;
     overflow: hidden;
   }
@@ -66,20 +43,27 @@
   }
   
   .pizza-title {
+    position: center;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 18px;
     text-align: center;
     background-color: transparent;
     border-bottom: 2px solid rgb(255, 255, 255);
+    color: orange;
   
   }
   
+  
+  .pizza-desc {
+    
+    padding: 10px;
+  }
   
   .pizza-text {
     margin-bottom: 10px;
     font-size: 14px;
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, cursive;
+    padding-bottom: 10px;
   }
   
   .button-container {
@@ -90,6 +74,7 @@
     padding: 5px;
     margin-left: 50px;
     margin-right: 50px;
+   
   }
   
   .details {
@@ -102,6 +87,7 @@
     font-size: 16px;
     font-weight: bold;
     transition: transform 0.3s ease-in-out;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
   
   
@@ -155,11 +141,3 @@
       justify-content: center;
     }
   }
-  
-  
-  
-
-  
-  
-  
-  

@@ -10,10 +10,10 @@ export default function Login() {
             <div className="login-container">
                 <form className="login-form" action="#" method="POST">
                     <h2>Login</h2>
-                    <label for="username">Username</label>
+                    <label htmlFor="username">Username</label>
                     <input type="text" id="username" name="username" required/>
 
-                        <label for="password">Password</label>
+                        <label htmlFor="password">Password</label>
                         <input type="password" id="password" name="password" required/>
 
                             <button className="login-button" type="submit">Login</button>

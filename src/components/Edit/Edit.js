@@ -13,11 +13,11 @@ export default function EditPizza() {
                     </div>
                     <div className="pizza-desc-edit">
                         <div className="name-container-edit">
-                            <label htmlFor="pizza-title-edit">Pizza Name:</label>
+                            <label htmlhtmlFor="pizza-title-edit">Pizza Name:</label>
                             <input type="text" id="pizza-title" name="pizza-title" defaultValue="Pizza 1" />
                         </div>
                         <div className="description-container-edit">
-                            <label htmlFor="pizza-text-edit">Pizza Description:</label>
+                            <label htmlhtmlFor="pizza-text-edit">Pizza Description:</label>
                             <textarea id="pizza-text-edit" name="pizza-text" defaultValue="Vegetarian pizza with tomato sauce, mozzarella cheese, mushrooms, onions, and bell peppers."></textarea>
                         </div>
                     </div>

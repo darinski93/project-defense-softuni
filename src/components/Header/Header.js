@@ -2,11 +2,6 @@ import { Link } from "react-router-dom"
 import '../../style/header.css'
 
 
-
-
-
-
-
 export default function Header() {
 
 	return (
