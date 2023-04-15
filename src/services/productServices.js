@@ -15,12 +15,8 @@ export const getAll = async () => {
 
 export const getOne = async (productId) => {
 
-    const response = await fetch(`${baseUrl}/${productId}`)
-    const result = await response.json()
-
-    const products = Object.values(result)
-
-    return products
+    const result = await request.get(`${baseUrl}/${productId}`)
+    return result
 }
 
 export const create = async (productData) => {

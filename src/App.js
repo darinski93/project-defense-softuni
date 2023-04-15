@@ -64,7 +64,7 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
           <Route path='/edit' element={<EditPizza />} />
-          <Route path='/details' element={<DetailsPizza />} />
+          <Route path='/menu/:productId' element={<DetailsPizza />} />
           <Route path='/create' element={<CreatePizza onCreateProductSubmit={onCreateProductSubmit} />}></Route>
         </Routes>
 

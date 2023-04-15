@@ -1,37 +1,52 @@
 import { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import '../../style/details.css'
+import * as productServices from '../../services/productServices'
 
-export default function DetailsPizza({
-    products
-}) {
+export default function DetailsPizza() {
 
-    const [selectedProduct, setSelectedProduct] = useState(null)
+    const { productId } = useParams()
+
+    const [item, setItem] = useState({})
 
     useEffect(() => {
 
-    })
+        productServices.getOne(productId)
+            .then(setItem)
+            .catch(err => {
+                console.log('Error' + err);
+            })
+    }, [productId])
+
 
     return (
         <div className="menu-details">
             <div className="pizza-details">
                 <form className="edit-form">
                     <div className="pizza-img-details">
-                        <img src="https://cdn.pixabay.com/photo/2017/12/09/08/18/pizza-3007395__480.jpg" alt="Pizza 2" />
+                        <img src={item.imageUrl} alt={item.name} />
                     </div>
                     <div className="pizza-desc">
                         <div className="name-container">
-                            <h2 className="pizza-title-details">Pizza 3</h2>
+                            <h2 className="pizza-title-details">{item.name}</h2>
                         </div>
                         <div className="description-container">
-                            <p className="pizza-text">Meat lover's pizza with tomato sauce, mozzarella cheese, pepperoni, sausage, and bacon.</p>
+                            <p className="pizza-text-details">{item.description}</p>
                         </div>
                         <div className="details-container">
                             <div className="weight-container">
-                                <p className="pizza-text">Weight: 500g</p>
+                                <p className="pizza-text-details">{item.weight}g</p>
                             </div>
-
-
+                        </div>
+                        <div className="details-container">
+                            <div className="prep-container">
+                                <p className="pizza-text-details">{item.preptime} min.</p>
+                            </div>
+                        </div>
+                        <div className="details-container">
+                            <div className="allergens-container">
+                                <p className="pizza-text-allergens">{item.allergens} min.</p>
+                            </div>
                         </div>
                     </div>
                     <div className="button-container-details">
