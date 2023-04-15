@@ -1,0 +1,104 @@
+
+.menu-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://img.freepik.com/free-vector/seamless-pizza-ingredients_1176-269.jpg?w=740&t=st=1681472787~exp=1681473387~hmac=e7f9851b298f704a2a75e7fb6896d95522e85b9d3c49441b33223b92dc8637fc');
+  
+  }
+  
+  .pizza-title-details {
+    font-size: 20px;
+    border-radius: 3px 3px 3px 3px;
+    text-align: center;
+    background-color: transparent;
+    border-bottom: 2px solid rgb(255, 253, 253);
+    color: white;
+    margin: auto;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  .pizza-details {
+    width: calc(22% - 7px);
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url('../../public/img/plain-backdrop-decorative-gray-textured.jpg');
+    background-size: cover;
+  }
+  
+  .details-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .pizza-img-details {
+    width: 100%;
+    margin-top: -20px;
+  }
+  
+  
+  
+  .pizza-img-details img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .name-container-details {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    text-align: center;
+    border-bottom: 2px solid rgb(255, 255, 255);
+  
+  }
+  
+  .button-container-details {
+    width: 100%;
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+  }
+  
+  .edit-details {
+    background-color: #0e9607;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-left: 5px;
+    text-decoration: none;
+  
+  }
+  
+  .delete-details {
+    text-decoration: none;
+    background-color: #E63946;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-right: 5px;
+  
+  
+  }
+  
+  .edit-details:hover,
+  .delete-details:hover {
+    transform: scale(1.1)
+  }

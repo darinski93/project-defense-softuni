@@ -1,4 +1,4 @@
-
+import '../../style/home.css'
 const src = 'https://media.istockphoto.com/id/1220566062/video/animation-of-the-pizza-making-process.mp4?s=mp4-640x640-is&k=20&c=_qYnexgxaPSaMwVDiscwMX-5tU2uLhYz0FslYYnks-Y='
 
 

@@ -10,3 +10,13 @@ export const getAll = async () => {
     
     return products
 }
+
+export const getOne = async (productId) => {
+
+    const response = await fetch(`${baseUrl}/${productId}`)
+    const result = await response.json()
+    
+    const products = Object.values(result)
+    
+    return products
+}

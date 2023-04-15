@@ -1,20 +1,27 @@
-import './App.css';
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './components/Home';
+// import './App.css';
+import Header from './components/Header/Header';
+import Footer from './components/Footer/Footer';
+import Home from './components/Home/Home';
 
 import { Routes, Route } from 'react-router-dom'
+import CreatePizza from './components/Create/Create';
+import DetailsPizza from './components/Details/Details';
 
 
-import Menu from './components/Menu';
-import Login from './components/Login';
-import Register from './components/Register';
-import CreatePizza from './components/CreatePizza';
-import EditPizza from './components/EditPizza';
-import DetailsPizza from './components/DetailsPizza';
+import Menu from './components/Menu/Menu';
+import Login from './components/Login/Login';
+import Register from './components/Register/Register';
+
+import EditPizza from './components/Edit/Edit';
 
 import * as productServices from './services/productServices'
 import { useEffect, useState } from 'react';
+
+
+
+
+
+
 
 
 
@@ -26,21 +33,17 @@ function App() {
 
   useEffect(() => {
     productServices.getAll()
-      .then(products => {
-        setProducts(products);
-
-      })
+      .then(setProducts)
       .catch(err => {
         console.log('Error' + err);
       })
-
-
-
   }, [])
 
 
 
   return (
+
+   
 
     <>
 
@@ -54,7 +57,7 @@ function App() {
           <Route path='/register' element={<Register />} />
           <Route path='/create' element={<CreatePizza />} />
           <Route path='/edit' element={<EditPizza />} />
-          <Route path='/details' element={<DetailsPizza />} />
+          <Route path='/details' element={<DetailsPizza products={products}/>} />
           <Route path='/create' element={<CreatePizza />}></Route>
         </Routes>
 

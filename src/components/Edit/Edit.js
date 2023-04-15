@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom"
-
+import '../../style/edit.css'
 
 export default function EditPizza() {
 
 
     return (
         <div className="menu-edit">
-
             <div className="pizza-edit">
                 <form className="edit-form">
                     <div className="pizza-img-edit">

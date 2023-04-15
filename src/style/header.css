@@ -1,0 +1,113 @@
+
+/* Header Styles */
+
+.tm-top-header {
+    background-color: black;
+    padding: 10px 0;
+  }
+  
+  .tm-top-header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 60px;
+    margin-right: 60px;
+  
+  }
+  
+  .tm-logo-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .tm-site-logo {
+    width: 50px;
+    height: auto;
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .tm-site-name {
+    margin-left: 0;
+    font-size: 40px;
+    font-weight: 500px;
+    color: white;
+    font-family: 'Handwriting', sans-serif;
+    text-shadow: 2px 2px 2px #333;
+    padding: 10px;
+    cursor: pointer;
+  
+  }
+  
+  .tm-site-name:hover,
+  .tm-site-name:hover+.tm-site-logo {
+    color: orange;
+  
+  }
+  
+  
+  
+  
+  /* Navigation Styles */
+  .tm-nav ul {
+  
+    margin: 0;
+    padding: 0;
+  }
+  
+  .tm-nav li {
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+  }
+  
+  .tm-nav li {
+    margin: 20px;
+  }
+  
+  .tm-nav a {
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding-left: 10px;
+    font-family: 'Tangerine', cursive;
+  
+  
+  }
+  
+  .tm-nav a:hover {
+    color: #ff8c00;
+  }
+  
+  .tm-nav li:before {
+    content: url('../../public/img/logo.png');
+    position: absolute;
+    margin-right: 10px;
+    /* reduce the margin to move the logo closer to the text */
+    top: 50%;
+    width: 16px;
+    /* set a smaller width for the logo */
+    height: auto;
+    transform: translateY(-50%) scale(0.6);
+    /* add a scale transformation to make the logo smaller */
+    opacity: 0;
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  }
+  
+  .tm-nav a:before {
+    content: "";
+    display: inline-block;
+    width: 16px;
+    /* set the same width as the logo */
+    height: 2px;
+    /* set a small height to create space between the logo and the link */
+  }
+  
+  .tm-nav li:hover:before {
+    margin-right: 70px;
+    opacity: 1;
+    transform: translateY(-50%) scale(0.5);
+    /* increase the scale on hover to make the logo slightly larger */
+  }
+  

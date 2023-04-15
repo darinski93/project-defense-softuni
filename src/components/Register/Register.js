@@ -1,3 +1,4 @@
+import '../../style/register.css'
 import { Link } from "react-router-dom"
 
 

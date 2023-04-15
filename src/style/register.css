@@ -1,0 +1,49 @@
+
+/* REGUSTER FORM ----------------------------*/
+.register-container {
+    background-color: #1c1c1c;
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 50px auto;
+    max-width: 400px;
+  }
+  
+  .register-container h2 {
+    text-align: center;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  
+  label {
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .register-button {
+    background-color: #f33f3f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .register-button:hover {
+    background-color: #f22;
+  }

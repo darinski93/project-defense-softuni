@@ -1,0 +1,126 @@
+
+.menu-edit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://img.freepik.com/free-vector/seamless-pizza-ingredients_1176-269.jpg?w=740&t=st=1681472787~exp=1681473387~hmac=e7f9851b298f704a2a75e7fb6896d95522e85b9d3c49441b33223b92dc8637fc');
+  
+  }
+  
+  .pizza-edit {
+    width: calc(22% - 4px);
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url('../../public/img/plain-backdrop-decorative-gray-textured.jpg');
+    background-size: cover;
+  
+  }
+  
+  .edit-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  .pizza-img-edit {
+    width: 100%;
+    margin-top: -20px;
+  }
+  
+  .pizza-img-edit img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  .name-container-edit {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+  }
+  
+  label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-family: 'Handwriting', sans-serif;
+    color: white;
+  }
+  
+  input[type="text"],
+  textarea {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 93%;
+    font-size: 16px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  
+  }
+  
+  textarea {
+    resize: none;
+    height: 100px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  
+  }
+  
+  .button-container-edit {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .save-edit {
+    background-color: green;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-left: 5px;
+  }
+  
+  .cancel-edit {
+    background-color: #E63946;
+    color: white;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    margin-right: 5px;
+    text-decoration: none;
+  
+  }
+  
+  
+  
+  .save-edit:hover,
+  .cancel-edit:hover {
+    transform: scale(1.1);
+  }
+  
+  
+  

@@ -1,3 +1,7 @@
+import '../../style/create.css'
+ 
+
+
 export default function CreatePizza() {
 
     return (
