@@ -70,10 +70,11 @@
   
   .pizza-text {
     margin-bottom: 10px;
-    font-size: 14px;
+    font-size: 16px;
     color: white;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, cursive;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     padding-bottom: 10px;
+  
     min-height: 60px; /* Add this line */
   }
   

@@ -8,12 +8,17 @@
 
 .pizza-title-details {
   position: center;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
   background-color: transparent;
   border-bottom: 2px solid rgb(255, 255, 255);
   color: orange;
  
+}
+
+.pizza-title-details::first-letter {
+  font-family: 'Pacifico', cursive;
+  font-size: 32px;
 }
 
 
