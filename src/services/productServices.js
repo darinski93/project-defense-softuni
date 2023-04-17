@@ -1,29 +1,36 @@
-import * as request from "./requester"
+import {requestFactory} from "./requester"
 
 
-const baseUrl = 'http://localhost:3030/jsonstore/menu'
+const baseUrl = 'http://localhost:3030/data/pizzas'
 
+export const productServiceFactory = (token) => {
 
-export const getAll = async () => {
+    const request = requestFactory(token)
 
-    const result = await request.get(baseUrl)
+    const getAll = async () => {
 
-    const products = Object.values(result)
+        const result = await request.get(baseUrl)
+        const products = Object.values(result)
+    
+        return products
+    }
+    
+    const getOne = async (productId) => {
+    
+        const result = await request.get(`${baseUrl}/${productId}`)
+        return result
+    }
+    
+    const create = async (productData) => {
+    
+        const result = await request.post(baseUrl, productData)
+        return result
+    }
 
-    return products
-}
+    return{
+        getAll,
+        getOne,
+        create
+    }
 
-export const getOne = async (productId) => {
-
-    const result = await request.get(`${baseUrl}/${productId}`)
-    return result
-}
-
-export const create = async (productData) => {
-
-
-    const result = await request.post(baseUrl, productData)
-
-
-    return result
 }

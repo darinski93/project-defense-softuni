@@ -8,8 +8,8 @@ import Home from './components/Home/Home';
 import { Routes, Route, useNavigate } from 'react-router-dom'
 import CreatePizza from './components/Create/Create';
 import DetailsPizza from './components/Details/Details';
-import * as authService from './services/authService'
-import * as productServices from './services/productServices'
+import { authServiceFactory } from './services/authService'
+import { productServiceFactory } from './services/productServices'
 
 import Menu from './components/Menu/Menu';
 import Login from './components/Login/Login';
@@ -24,17 +24,13 @@ import Logout from './components/Logout/Logout';
 
 
 
-
-
-
-
-
 function App() {
 
   const navigate = useNavigate()
   const [products, setProducts] = useState([])
   const [auth, setAuth] = useState({})
-
+  const productServices = productServiceFactory(auth.accessToken)
+  const authService = authServiceFactory(auth.accessToken)
 
 
   useEffect(() => {
@@ -95,7 +91,7 @@ function App() {
   }
 
   const onLogout = async () => {
-    // const result = await authService.logout()
+    await authService.logout()
 
     setAuth({})
   }

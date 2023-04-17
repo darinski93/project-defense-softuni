@@ -1,18 +1,23 @@
 import { useEffect, useState } from "react"
 import { Link, useParams } from "react-router-dom"
 import '../../style/details.css'
-import * as productServices from '../../services/productServices'
+
+import {productServiceFactory}from '../../services/productServices'
+import { useService } from "../../hooks/useService"
 
 export default function DetailsPizza() {
 
     const { productId } = useParams()
-
     const [item, setItem] = useState({})
+
+    const productServices = useService(productServiceFactory)
 
     useEffect(() => {
 
         productServices.getOne(productId)
-            .then(setItem)
+            .then(result =>{
+                setItem(result)
+            })
             .catch(err => {
                 console.log('Error' + err);
             })

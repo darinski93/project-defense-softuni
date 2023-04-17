@@ -5,7 +5,7 @@ import { useContext } from "react"
 
 export default function Header() {
 
-	const { isAuthenticated} = useContext(AuthContext)
+	const { isAuthenticated } = useContext(AuthContext)
 
 	return (
 		<div className="tm-top-header">
@@ -18,16 +18,19 @@ export default function Header() {
 					<nav className="tm-nav">
 						<ul>
 							<li><Link to='/'>Home</Link></li>
+							<li><Link to='/menu'> Menu</Link></li>
 							{isAuthenticated && (
 								<>
+
 									<li><Link to='/create'>Add Product</Link></li>
 									<li><Link to='/logout'>Logout</Link></li>
+
 								</>
 							)}
 
 							{!isAuthenticated && (
 								<>
-									<li><Link to='/menu'> Menu</Link></li>
+
 									<li><Link to='/login'>Login</Link></li>
 								</>
 							)}
