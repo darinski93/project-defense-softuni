@@ -1,6 +1,36 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+To run this project locally, follow the steps below:
+
+1.Clone this repository to your local machine using git clone [https://github.com/darinski93/project-defense-softuni]\
+2.Install all the dependencies by running npm install\
+3.Start the development server by running npm node server.js\
+4.Open your browser and navigate to http://localhost:3000
+
+
+## Dependencies: 
+
+This project uses the following dependencies:
+
+react\
+react-dom\
+react-router-dom\
+
+
+##  Features:
+This project comes with the following features:
+
+Ability to add Pizza recipes to your profile with the following details:
+
+Image\
+Name of the pizza recipe\
+Description\
+Weight\
+Allergens
+
+
+Ability to view all the pizza recipe.\
+Ability to edit recipe ,details or delete a recipe from your profile.
 
 ## Available Scripts
 
