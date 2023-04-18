@@ -14,7 +14,7 @@ export default function Menu() {
       {products.map(x => <Product key={x._id} {...x} />)}
 
       {products.length === 0 && (
-        <h3>No products yet</h3>
+        <h3>No products yet.. 😢</h3>
       )}
 
 
