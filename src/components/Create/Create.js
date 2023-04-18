@@ -17,14 +17,14 @@ export default function CreatePizza() {
         imageUrl: '',
         allergens: '',
         weight: '',
-        preptime: ''
+   
 
     }, onCreateProductSubmit)
 
     return (
         <div className="form-container-create">
             <form className="pizza-form" onSubmit={onSubmit} method='POST'>
-                <h2 className="form-heading">Create New Pizza</h2>
+                <h2 className="form-heading">New Pizza</h2>
                 <div className="form-input">
                     <label htmlFor="pizza-name" className="form-label">Pizza Name</label>
                     <input value={values.name} onChange={changeHandler} type="text" id="name" name="name" className="form-text-input" required />
@@ -45,12 +45,9 @@ export default function CreatePizza() {
                     <label htmlFor="pizza-weight" className="form-label">Weight</label>
                     <input value={values.weight} onChange={changeHandler} type="text" id="weight" name="weight" className="form-text-input" required />
                 </div>
-                <div className="form-input">
-                    <label htmlFor="pizza-preptime" className="form-label">Preptime</label>
-                    <input value={values.preptime} onChange={changeHandler} type="text" id="preptime" name="preptime" className="form-text-input" required />
-                </div>
+               
                 <div className="form-submit-button-container">
-                    <input type="submit" value="Create Pizza" className="form-submit-button" />
+                    <input type="submit" value="Аdd Pizza" className="form-submit-button" />
                 </div>
             </form>
         </div>

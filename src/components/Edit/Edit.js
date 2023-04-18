@@ -10,7 +10,7 @@ import { useProductContext } from "../../contexts/ProductContext"
 
 export default function EditPizza() {
 
-    const onProductEditSubmit = useProductContext()
+    const { onProductEditSubmit } = useProductContext()
     const { productId } = useParams()
     const productService = useService(productServiceFactory)
     const { values, changeHandler, onSubmit, changeValues } = useForm({
@@ -19,8 +19,7 @@ export default function EditPizza() {
         imageUrl: '',
         description: '',
         weight: '',
-        allergens: '',
-        preptime: '',
+        allergens: '', 
 
     }, onProductEditSubmit)
 
@@ -71,16 +70,6 @@ export default function EditPizza() {
                                 id="pizza-text-edit"
                                 name="weight"
                                 value={values.weight}
-                                onChange={changeHandler}
-                            />
-                        </div>
-                        <div className="description-container-edit">
-                            <label htmlFor="pizza-text-edit">Preptime:</label>
-                            <input
-                                type="text"
-                                id="pizza-text-edit"
-                                name="preptime"
-                                value={values.preptime}
                                 onChange={changeHandler}
                             />
                         </div>

@@ -13,7 +13,7 @@ export default function Header() {
 				<div className="tm-top-header-inner">
 					<div className="tm-logo-container">
 						<img src="img/logo.png" alt="Logo" className="tm-site-logo" />
-						<Link to='/' style={{ textDecoration: 'none' }}><h1 className="tm-site-name">Pizza Grazie Italia</h1></Link>
+						<Link to='/' style={{ textDecoration: 'none' }}><h1 className="tm-site-name">Pizzaliciousness</h1></Link>
 					</div>
 					<nav className="tm-nav">
 						<ul>

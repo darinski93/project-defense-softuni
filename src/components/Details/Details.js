@@ -71,11 +71,7 @@ export default function DetailsPizza() {
                                 <p className="pizza-text-details">{item.weight}g</p>
                             </div>
                         </div>
-                        <div className="details-container">
-                            <div className="prep-container">
-                                <p className="pizza-text-details">{item.preptime} min.</p>
-                            </div>
-                        </div>
+                        
                         <div className="details-container">
                             <div className="allergens-container">
                                 <p className="pizza-text-allergens">{item.allergens} min.</p>

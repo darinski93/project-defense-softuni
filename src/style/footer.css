@@ -1,46 +1,14 @@
-
 /*footer */
 footer {
-    background-color: black;
-    color: white;
-    padding: 20px;
-  }
-  
-  .footer-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    /* Center the columns vertically */
-    margin: 0 auto;
-    /* Center the container horizontally */
-    max-width: 960px;
-    /* Set a max width for the container */
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  
-  }
-  
-  .contact-info,
-  .opening-hours {
-    flex-basis: 45%;
-    /* Set the width of each column */
-  }
-  
-  ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  ul li {
-    margin-bottom: 10px;
-  }
-  
-  h3 {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-  }
-  
-  
-  
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+
+
+.rights-reserved {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  /* Добавете отстояние отгоре и отдолу, ако е необходимо */
+}

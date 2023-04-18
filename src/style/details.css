@@ -1,126 +1,140 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+}
+
 .menu-details {
+  background-image: url('https://images.saatchiart.com/saatchi/1773045/art/8987123/8050491-IPVESSYO-7.jpg');
+
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url('https://img.freepik.com/free-vector/seamless-pizza-ingredients_1176-269.jpg?w=740&t=st=1681472787~exp=1681473387~hmac=e7f9851b298f704a2a75e7fb6896d95522e85b9d3c49441b33223b92dc8637fc');
-
-}
-
-.pizza-title-details {
-  position: center;
-  font-family: 'Montserrat', sans-serif;
-  text-align: center;
-  background-color: transparent;
-  border-bottom: 2px solid rgb(255, 255, 255);
-  color: orange;
+  height: 110vh;
+  padding: 20px;
  
 }
 
+
+.pizza-details {
+  background-color: #202020;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  width: 100%;
+}
+
+.pizza-img-details {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+}
+
+.pizza-img-details img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.pizza-desc {
+  flex: 1;
+}
+
+.name-container,
+.description-container,
+.details-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+}
+
+
+.pizza-title-details {
+  position: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    text-align: center;
+    background-color: transparent;
+    color: orange;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
 .pizza-title-details::first-letter {
   font-family: 'Pacifico', cursive;
   font-size: 32px;
 }
 
-
-.pizza-details {
-  width: calc(22% - 7px);
-  border: 1px solid black;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  background-image: url('../../public/img/plain-backdrop-decorative-gray-textured.jpg');
-  background-size: cover;
-}
-
-.details-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.pizza-img-details {
-  width: 100%;
-  margin-top: -20px;
-}
-
-
-
-.pizza-img-details img {
-  width: 100%;
-  border-radius: 5px;
-}
-
-.name-container-details {
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 14px;
-  text-align: center;
-
-}
-
-.button-container-details {
-  width: 100%;
-  display: flex;
-  margin-top: 20px;
-  justify-content: space-between;
-  margin: auto;
-}
-
-.edit-details {
-  background-color: #0e9607;
-  color: white;
-  padding: 10px 25px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  margin-left: 5px;
-  text-decoration: none;
-
-}
-
-.delete-details {
-  text-decoration: none;
-  background-color: #E63946;
-  color: white;
-  padding: 10px 25px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: bold;
-  transition: all 0.3s ease;
-  margin-right: 5px;
-
-
-}
-
-.edit-details:hover,
-.delete-details:hover {
-  transform: scale(1.1)
-}
-
 .pizza-text-details {
-  text-align: center;
   margin-bottom: 10px;
   font-size: 16px;
   color: white;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  padding: 10px;
+  padding-bottom: 10px;
 }
 
 .pizza-text-allergens {
-  text-align: center;
   margin-bottom: 10px;
   font-size: 16px;
-  color: rgb(208, 30, 30);
+  color: rgb(203, 15, 15);
   font-family: Georgia, 'Times New Roman', Times, serif;
-  padding: 5px;
+  padding-bottom: 10px;
 }
 
-.allergens-container {
+.button-container-details {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px; 
+}
 
-  align-items: center;
+.edit-details{
+  background-color: #0baf3f;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+.delete-details {
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.delete-details {
+  background-color: #dc3545;
+}
+
+.edit-details:hover {
+  background-color: #56be43;
+}
+
+.delete-details:hover {
+  background-color: #c82333;
 }

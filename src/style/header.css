@@ -84,13 +84,10 @@
     content: url('../../public/img/logo.png');
     position: absolute;
     margin-right: 10px;
-    /* reduce the margin to move the logo closer to the text */
     top: 50%;
     width: 16px;
-    /* set a smaller width for the logo */
     height: auto;
-    transform: translateY(-50%) scale(0.6);
-    /* add a scale transformation to make the logo smaller */
+    transform: translateY(-50%) scale(0.3);
     opacity: 0;
     transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
   }

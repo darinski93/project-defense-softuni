@@ -1,114 +1,86 @@
+/* create.css */
 
-/* form container */
+body {
+  font-family: 'Arial', sans-serif;
+
+}
+
 .form-container-create {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url('https://img.freepik.com/free-vector/seamless-pizza-ingredients_1176-269.jpg?w=740&t=st=1681472787~exp=1681473387~hmac=e7f9851b298f704a2a75e7fb6896d95522e85b9d3c49441b33223b92dc8637fc');
-  
-  }
-  
-  /* form style */
-  .pizza-form {
-    border: 1px solid black;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgb(255, 255, 255);
-    color: white;
-    width: calc(20% - 7px);
-    margin: 0 6px 12px 6px;
-    padding: 50px;
-    background-image: url('../../public/img/plain-backdrop-decorative-gray-textured.jpg');
-  }
-  
-  /* form heading */
-  .form-heading {
-    text-align: center;
-    font-size: 22px;
-    font-family: 'Courier New', Courier, monospace;
-    margin-bottom: 20px;
-    text-shadow: 1px 1px black;
-  }
-  
-  /* form input label */
-  .form-label {
-    font-size: 16px;
-    font-family: 'Courier New', Courier, monospace;
-    margin-bottom: 10px;
-    text-shadow: 1px 1px black;
-    color: white;
-  }
-  
-  /* form input text and textarea */
-  .form-text-input,
-  .form-textarea {
-    padding: 10px;
-    border: none;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 5px;
-    font-size: 16px;
-    color: rgb(8, 8, 8);
-  }
-  
-  /* form input textarea */
-  .form-textarea {
-    resize: none;
-  }
-  
-  /* form input file */
-  .form-file-input {
-    margin-top: 10px;
-  }
-  
-  /* form submit button */
-  .form-submit-button {
-    padding: 10px 20px;
-    border: none;
-    background-color: orange;
-    color: white;
-    border-radius: 5px;
-    font-size: 18px;
-    font-family: 'Courier New', Courier, monospace;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  /* form submit button hover */
-  .form-submit-button:hover {
-    background-color: #ce653f;
-  }
-  
-  /* form input container */
-  .form-input {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-  }
-  
-  .form-submit-button-container {
-    display: flex;
-    justify-content: center;
-  }
-  
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f6e7e7;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
 
-  .add-pizza-container {
-    position: absolute;
-    bottom: 0;
-    left: 20px;
-    /* change left value */
-  }
-  
-  .add-pizza-button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 4px 2px;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-    border-radius: 15px;
-  }
+.pizza-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-heading {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Poppins',cursive;
+
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.form-text-input,
+.form-textarea {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 8px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.form-text-input:focus,
+.form-textarea:focus {
+  border-color: #007bff;
+}
+
+.form-textarea {
+  resize: none;
+}
+
+.form-submit-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+.form-submit-button {
+  background-color: #1abf0e;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-family: 'Poppins',cursive;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  transition: background-color 0.2s;
+}
+
+.form-submit-button:hover {
+  background-color: #0056b3;
+}
