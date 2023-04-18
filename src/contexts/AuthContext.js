@@ -16,17 +16,16 @@ export const AuthProvider = ({
 
     const authService = authServiceFactory(auth.accessToken)
 
-
-
-
     const onLoginSubmit = async (data) => {
+
         try {
             const result = await authService.login(data);
-            setAuth(result)
-            navigate('/menu')
-
+            setAuth(result);
+            navigate('/menu');
+            return Promise.resolve(result);
         } catch (error) {
             console.log('There is a problem');
+            return Promise.reject(error);
         }
     }
 
@@ -35,13 +34,12 @@ export const AuthProvider = ({
         const { confirmPassword, ...registerData } = values
 
         if (confirmPassword !== registerData.password) {
-            return
+            return alert('Passwords don\'t match')
         }
 
         try {
 
             const result = await authService.register(registerData)
-
             setAuth(result)
             navigate('/menu')
 
@@ -55,13 +53,13 @@ export const AuthProvider = ({
 
     const onLogout = async () => {
 
-    
+
         await authService.logout()
 
         setAuth({})
     }
 
-    
+
 
     const context = {
         onLoginSubmit,
@@ -74,7 +72,7 @@ export const AuthProvider = ({
 
     }
 
-    
+
 
     return (
 

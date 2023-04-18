@@ -1,5 +1,5 @@
 import '../../style/login.css'
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { AuthContext } from '../../contexts/AuthContext';
 import { Link } from "react-router-dom";
 import { useForm } from '../../hooks/useForm';
@@ -14,11 +14,20 @@ const LoginFormKeys = {
 
 export default function Login() {
 
+    const [error, setError] = useState('');
     const { onLoginSubmit } = useContext(AuthContext)
     const { values, changeHandler, onSubmit } = useForm({
         [LoginFormKeys.Email]: '',
         [LoginFormKeys.Password]: '',
-    }, onLoginSubmit)
+    }, async (data) => {
+        try {
+            await onLoginSubmit(data);
+        } catch (error) {
+            setError('Email or password don\'t match');
+        }
+    })
+
+
     return (
         <>
 
@@ -43,6 +52,7 @@ export default function Login() {
                         onChange={changeHandler}
                         autoComplete="off"
                     />
+                    {error && <p className="error">{error}</p>}
                     <button className="login-button" type="submit">Login</button>
                 </form>
                 <div className="register-link">
