@@ -1,12 +1,12 @@
+import { useProductContext } from '../../contexts/ProductContext';
 import '../../style/menu.css'
 import Product from "./Product/Product";
 
 
 
-export default function Menu({
-  products
-}) {
+export default function Menu() {
 
+  const { products } = useProductContext()
 
   return (
     <div className="menu">

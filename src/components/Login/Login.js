@@ -41,6 +41,7 @@ export default function Login() {
                         name={LoginFormKeys.Password}
                         value={values[LoginFormKeys.Password]}
                         onChange={changeHandler}
+                        autoComplete="off"
                     />
                     <button className="login-button" type="submit">Login</button>
                 </form>

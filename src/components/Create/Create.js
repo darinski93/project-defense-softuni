@@ -1,16 +1,17 @@
 
 
 import '../../style/create.css'
+
+import { useProductContext } from '../../contexts/ProductContext'
 import { useForm } from '../../hooks/useForm'
 
 
 
+export default function CreatePizza() {
 
-export default function CreatePizza({
-    onCreateProductSubmit
-}) {
+    const { onCreateProductSubmit } = useProductContext()
 
-    const {values, changeHandler, onSubmit} = useForm({
+    const { values, changeHandler, onSubmit } = useForm({
         name: '',
         description: '',
         imageUrl: '',
@@ -26,7 +27,7 @@ export default function CreatePizza({
                 <h2 className="form-heading">Create New Pizza</h2>
                 <div className="form-input">
                     <label htmlFor="pizza-name" className="form-label">Pizza Name</label>
-                    <input value={values.title} onChange={changeHandler} type="text" id="name" name="name" className="form-text-input" required />
+                    <input value={values.name} onChange={changeHandler} type="text" id="name" name="name" className="form-text-input" required />
                 </div>
                 <div className="form-input">
                     <label htmlFor="pizza-description" className="form-label">Pizza Description</label>

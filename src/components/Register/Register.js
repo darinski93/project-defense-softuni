@@ -41,7 +41,8 @@ export default function Register() {
                     id="password"
                     name="password"
                     value={values.password}
-                    onChange={changeHandler} />
+                    onChange={changeHandler}
+                    autoComplete="off" />
 
                 <label htmlFor="confirm-password">Confirm Password:</label>
                 <input
@@ -50,6 +51,7 @@ export default function Register() {
                     name="confirmPassword"
                     value={values.confirmPassword}
                     onChange={changeHandler}
+                    autoComplete="off"
                 />
                 <button className="register-button" type="submit">Register</button>
                 <p>Already have an account?<Link to='/login'>Login here</Link></p>

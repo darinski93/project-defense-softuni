@@ -48,7 +48,6 @@
 
 .pizza-img-details img {
   width: 100%;
-  height: auto;
   border-radius: 5px;
 }
 
@@ -56,7 +55,6 @@
   font-family: 'Courier New', Courier, monospace;
   font-size: 14px;
   text-align: center;
-  border-bottom: 2px solid rgb(255, 255, 255);
 
 }
 
@@ -110,7 +108,6 @@
   font-size: 16px;
   color: white;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  border-bottom: 1px solid white;
   padding: 10px;
 }
 
@@ -120,7 +117,6 @@
   font-size: 16px;
   color: rgb(208, 30, 30);
   font-family: Georgia, 'Times New Roman', Times, serif;
-  border-bottom: 1px solid white;
   padding: 5px;
 }
 

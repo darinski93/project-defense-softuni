@@ -1,27 +1,55 @@
-import { useEffect, useState } from "react"
-import { Link, useParams } from "react-router-dom"
+import { useContext, useEffect, useState } from "react"
+import { Link, useNavigate, useParams } from "react-router-dom"
 import '../../style/details.css'
 
-import {productServiceFactory}from '../../services/productServices'
+import { productServiceFactory } from '../../services/productServices'
 import { useService } from "../../hooks/useService"
+import { AuthContext } from "../../contexts/AuthContext"
+import { useProductContext } from "../../contexts/ProductContext"
+
+
 
 export default function DetailsPizza() {
 
+    const { userId } = useContext(AuthContext)
     const { productId } = useParams()
     const [item, setItem] = useState({})
+    const { deleteProduct } = useProductContext()
 
     const productServices = useService(productServiceFactory)
+
+    const navigate = useNavigate()
 
     useEffect(() => {
 
         productServices.getOne(productId)
-            .then(result =>{
+            .then(result => {
                 setItem(result)
             })
             .catch(err => {
                 console.log('Error' + err);
             })
     }, [productId])
+
+
+    const isOwner = item._ownerId === userId
+
+
+    const onDeleteClick = async (e) => {
+        // eslint-disable-next-line no-restricted-globals
+        const result = confirm(`Are you sure, you want to delete ${item.name}?`)
+
+        e.preventDefault(e)
+        if (result) {
+            await productServices.delete(item._id)
+            
+            deleteProduct(item._id)
+
+            navigate('/menu')
+
+        }
+
+    }
 
 
     return (
@@ -54,10 +82,14 @@ export default function DetailsPizza() {
                             </div>
                         </div>
                     </div>
-                    <div className="button-container-details">
-                        <Link to='/edit' className="edit-details">Edit</Link>
-                        <Link to='/' className="delete-details">Delete</Link>
-                    </div>
+
+                    {isOwner && (
+                        <div className="button-container-details">
+                            <Link to={`/menu/${item._id}/edit`} className="edit-details">Edit</Link>
+                            <button className="delete-details" onClick={onDeleteClick}>Delete</button>
+                        </div>
+                    )}
+
                 </form>
             </div>
         </div>

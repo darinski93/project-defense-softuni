@@ -1,7 +1,7 @@
-import {requestFactory} from "./requester"
+import { requestFactory } from "./requester"
 
 
-const baseUrl = 'http://localhost:3030/data/pizzas'
+const baseUrl = 'http://localhost:3030/data/menu'
 
 export const productServiceFactory = (token) => {
 
@@ -11,26 +11,31 @@ export const productServiceFactory = (token) => {
 
         const result = await request.get(baseUrl)
         const products = Object.values(result)
-    
+
         return products
     }
-    
+
     const getOne = async (productId) => {
-    
+
         const result = await request.get(`${baseUrl}/${productId}`)
         return result
     }
-    
+
     const create = async (productData) => {
-    
+
         const result = await request.post(baseUrl, productData)
         return result
     }
 
-    return{
+    const edit = (producId, data) => request.put(`${baseUrl}/${producId}`, data);
+    const deleteProduct = (productId) => request.delete(`${baseUrl}/${productId}`)
+
+    return {
         getAll,
         getOne,
-        create
+        create,
+        edit,
+        delete: deleteProduct,
     }
 
 }
